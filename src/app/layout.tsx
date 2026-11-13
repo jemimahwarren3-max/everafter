@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, DM_Sans, Italiana } from "next/font/google";
 import { Chrome } from "@/components/Chrome";
+import { SiteNav } from "@/components/SiteNav";
+import { SiteFooter } from "@/components/SiteFooter";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -40,7 +42,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${cormorant.variable} ${dmSans.variable} ${italiana.variable}`}
     >
       <body className="min-h-full flex flex-col bg-ivory text-ink font-body antialiased">
-        <Chrome>{children}</Chrome>
+        <Chrome>
+          <SiteNav />
+          <main className="flex-1">{children}</main>
+          <SiteFooter />
+        </Chrome>
       </body>
     </html>
   );

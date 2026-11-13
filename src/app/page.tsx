@@ -1,4 +1,3 @@
-import { SiteNav } from "@/components/SiteNav";
 import { Hero } from "@/components/Hero";
 import { Marquee } from "@/components/Marquee";
 import { EditorialIntro } from "@/components/EditorialIntro";
@@ -8,7 +7,6 @@ import { FeaturedWork } from "@/components/FeaturedWork";
 import { Destinations } from "@/components/Destinations";
 import { Testimonial } from "@/components/Testimonial";
 import { ConsultationCTA } from "@/components/ConsultationCTA";
-import { SiteFooter } from "@/components/SiteFooter";
 
 const marqueeWords = [
   "ROMANTIC",
@@ -21,22 +19,18 @@ const marqueeWords = [
 export default function Home() {
   return (
     <>
-      <SiteNav />
-      <main>
-        <Hero />
-        <Marquee
-          words={marqueeWords}
-          className="border-y border-ink/10 bg-ivory py-6 text-ink/20"
-        />
-        <EditorialIntro />
-        <StatBand />
-        <Philosophy />
-        <FeaturedWork />
-        <Destinations />
-        <Testimonial />
-        <ConsultationCTA />
-      </main>
-      <SiteFooter />
+      <Hero />
+      <Marquee
+        words={marqueeWords}
+        className="border-y border-ink/10 bg-ivory py-6 text-ink/20"
+      />
+      <EditorialIntro />
+      <StatBand />
+      <Philosophy />
+      <FeaturedWork />
+      <Destinations />
+      <Testimonial />
+      <ConsultationCTA />
     </>
   );
 }
